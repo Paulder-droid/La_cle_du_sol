@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre du site -->
+    <title>Clé de Sol</title>
+    
+    <!-- Description pour le SEO -->
+    <meta name="Clé du Sol" content="Découvrez notre restaurant, nos services et contactez-nous pour en savoir plus.Pour vivre de moment inoubliable en famille, entre amis ou même amoureux 🥰.">
+    <!-- Mots-clés pour le SEO -->
+    <meta name="keywords" content="site vitrine, entreprise, services, contact, professionnel">
+
+    <!-- Auteur du site -->
+    <meta name="Paulder-droid" content="Clé du Sol">
+
+    <!-- Favicon pour l'icône du site -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Intégration Open Graph pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Site Vitrine Professionnel | Clé du Sol">
+    <meta property="og:un restaurant qui vous offre un service qui vous est dû , en proposant des plats africaines, que vous ne verrez nul pas ailleurs." content="Découvrez notre restaurant, nos services et contactez-nous pour en savoir plus.Pour vivre de moment inoubliable en famille, entre amis ou même amoureux. 😍">
+    <meta property="og:image" content="lien_vers_image.jpg">
+    <meta property="og:url" content="https://www.monsite.com">
+    <meta property="og:type" content="website">
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="styles.css">
+<style>
+    /* Importation de la police Playfair Display depuis Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+    /* Global */
+    body {
+        font-family: 'Playfair Display', serif; /* Application de la police Playfair Display */
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF; /* Fond blanc */
+        color: #000000; /* Texte noir */
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h1, h2, h3 {
+        color: #000000; /* Noir pour les titres */
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #C2B093; /* Beige/marron clair pour le bouton */
+        border: none;
+        color: #FFFFFF; /* Texte blanc */
+        cursor: pointer;
+    }
+
+    /* En-tête */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #C2B093; /* Fond beige/marron clair */
+        padding: 10px 20px;
+    }
+
+    header .logo img {
+        height: 50px; /* Ajuste la taille du logo */
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        color: #000000; /* Liens noirs */
+        font-weight: bold;
+    }
+
+    /* Media query pour Android : navigation verticale */
+    @media (max-width: 768px) {
+        nav ul {
+            display: block; /* Changer l'affichage en bloc pour une navigation verticale */
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0; /* Espacement entre les éléments de la liste */
+        }
+
+        nav a {
+            display: block; /* Faire en sorte que chaque lien soit un bloc */
+            padding: 10px;
+            background-color: #F4F4F4; /* Fond léger pour les liens */
+            color: #000000;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #C2B093; /* Fond beige/marron clair au survol */
+            color: #FFFFFF; /* Texte blanc au survol */
+        }
+    }
+
+    /* Section d'accueil */
+    .accueil {
+        text-align: center;
+        background-color: #C2B093; /* Fond beige/marron clair */
+        padding: 50px 20px;
+    }
+
+    .accueil h1 {
+        font-size: 2.5em;
+        margin: 20px 0;
+    }
+
+    .accueil p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .cta {
+        padding: 15px 30px;
+        background-color: #000000; /* Fond noir */
+        color: #FFFFFF; /* Texte blanc */
+        font-size: 1.2em;
+    }
+
+    /* Section À propos */
+    .a-propos {
+        background-color: #FFFFFF; /* Fond blanc */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .a-propos h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    /* Section Services */
+    .services {
+        background-color: #F9F9F9; /* Fond gris clair */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .services h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .service {
+        margin: 20px 0;
+    }
+
+    .service h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    /* Section Contact */
+    .contact {
+        background-color: #FFFFFF; /* Fond blanc */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .contact h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .contact form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    .contact input, .contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #C2B093;
+    }
+
+    .contact button {
+        width: 100%;
+        padding: 10px;
+        background-color: #C2B093;
+        color: #FFFFFF;
+    }
+
+    /* Pied de page */
+    footer {
+        background-color: #C2B093; /* Fond beige/marron clair */
+        text-align: center;
+        padding: 20px;
+        color: #000000; /* Texte noir */
+    }
+
+    /* Logo */
+    header .logo img {
+        max-width: 100%; /* Pour ne pas dépasser la largeur du conteneur */
+        height: auto; /* Conserver les proportions */
+    }
+
+    /* Pour les écrans d'ordinateur */
+    @media (min-width: 769px) {
+        header .logo {
+            display: flex;
+            align-items: center;
+            height: 100px; /* Ajuste cette valeur si besoin */
+        }
+
+        header .logo img {
+            height: 80px; /* Ajuste en fonction de la hauteur de la navigation */
+        }
+    }
+
+    /* Pour Android (navigation verticale) */
+    @media (max-width: 768px) {
+        header .logo {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        header .logo img {
+            height: 120px; /* Ajuster pour que ça prenne l'espace entre les liens */
+            width: auto;
+        }
+
+        footer {
+            background-color: #000000; /* Fond noir */
+            color: #FFFFFF; /* Texte en blanc */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .contact-info {
+            margin-bottom: 15px;
+        }
+
+        footer .contact-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #000000; /* Texte noir */
+            background-color: #C2B093; /* Beige/marron clair */
+            border-radius: 8px; /* Coins arrondis */
+            transition: background-color 0.3s ease;
+        }
+
+        footer .contact-btn:hover {
+            background-color: #A08874; /* Teinte légèrement plus foncée pour l'effet de survol */
+        }
+
+        footer p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    }
+</style> 
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="logo">
+            <img src="/logo_de_clé_du_sol.jpg" alt="Logo de l'entreprise">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <!-- Section d'accueil -->
+    <section id="accueil" class="accueil">
+        <h1>Bienvenue sur le site web Clé de Sol🥰</h1>
+        <p>Votre restaurant adapté à vos besoin et idéale pour un service de qualité.</p>
+        <a href="#contact" class="cta">Contactez-nous</a>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="a-propos" class="a-propos">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes un restaurant basé à Kinshasa Ngalula/UPN, offrant un service de restauration exceptionnelle  la capitale.
+        <br><br>Nous vous offrons une cuisine d'exception africaine et européenne; des boissons de tout genre (Wisky,Vin, bière...).
+        <br><br>Nous disposons aussi d'un service de livraison ainsi nous pourrons vous servir n'importe où à Kinshasa.</p>
+    </section>
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <h2>Nos services</h2>
+        <div class="service">
+            <h3>Service de Restauration</h3>
+            <p>Nous avons sélectionné les meilleurs mets tant africaine, particulièrement congolaise qu'européenne. <br><br>Ainsi nous vous invitons à coûté à <u>l'un de  meilleur poison qui soit</u>; et de coûter aux boissons qui vous sont dédiés dans notre bar,puis prenez du bon temps en profitant d'une ambiance chaleureuse qui vous sera agréable.</p>
+        </div>
+        <div class="service">
+            <h3>Service de Livraison</h3>
+            <p>Nos commandes se font dans l'intégralité de la capitale au besoin de chaque client, en s'assurant que votre repas vous soit <u>livré à temps et au chaud</u>.<br><br>Contactez pour en savoir plus sur les mets et comment élaborer une livraison</p>
+        </div>
+        <div class="service">
+            <h3>Service de réservation </h3>
+            <p>Nos reservation se vont 24h/24h, sur notre page web, page Facebook, sur WhatsApp, ou sur notre compte email, nous serons disponibles pour vous pas seulement pour la réservation mais ausi pour vos avis, vos impressions et vos questions.<br><br> Veuillez  nous contacter au plus vite nous serons ravis d'échanger avec vous 🤗. </div> 
+    </section>
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="POST">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+      <h4>Pour plus d'info veuillez nous contacter en cliquant sur le lien suivant :</h4>
+     <div class="contact-info">
+       <a href="https://wa.me/243852715188?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20!" target="_blank" class="contact-btn whatsapp">WhatsApp
+       </a>
+       <br><br>
+       <a href="mailto:kakudjipaul944@gmail.com" class="contact-btn email"> Email
+       </a>
+     </div>
+        <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
