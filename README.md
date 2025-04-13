@@ -12,9 +12,6 @@ Bienvenue sur **La Clé du Sol**, un site vitrine simple et élégant conçu pou
 
 [Voir le site en ligne](https://paulder-droid.github.io/La_cle_du_sol/)
 
-![aperçu du site](./screenshot.png)  
-*Capture d’écran du site (à remplacer par ta propre image)*
-
 ---
 
 ## **Fonctionnalités**
